@@ -1,0 +1,82 @@
+<div class="container mt-4">
+    <h1>Danh sách tất cả trường học</h1>
+    <table class="table table-hover mt-4">
+        <thead>
+            <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên trường học</th>
+            <th scope="col">Trang web trường</th>
+            <th scope="col">Trình độ đào tạo</th>
+            <th scope="col">Số lượng học sinh</th>
+            <th scope="col">Hành động</th>
+            </tr>
+        </thead>
+        {{#each schools}}
+            <tbody>
+                <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.url}}</td>
+                <td>{{this.level}}</td>
+                <td>{{this.size}}</td>
+                <td>
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#deleteSchool" data-id="{{this._id}}">
+                    Xóa
+                    </button>
+                </td>
+                </tr>
+            </tbody>
+        {{else}}
+          <tr>
+            <td colspan="7" class="text-center">
+              Không có trường học nào. <a href="">Thêm trường học</a>
+            </td>
+          </tr>
+        {{/each}}
+    </table>
+</div>
+
+<form name="form-deleteSchool" method="POST"></form>
+<!-- Modal -->
+<div class="modal fade" id="deleteSchool" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xóa trường học này?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Thao tác này không thể thu hồi. Bạn muốn tiếp tục xóa?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn-deleteSchool">Xóa</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        var schoolId 
+        var showSchoolBtn = document.getElementById('btn-deleteSchool')
+        var showSchoolForm = document.forms['form-deleteSchool']
+
+        $('#deleteSchool').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) 
+            schoolId = button.data('id')
+        })
+        
+        showSchoolBtn.onclick = function() {
+          showSchoolForm.action = '/school/destroy/' + schoolId + '/?_method=DELETE'
+          showSchoolForm.submit()
+        }
+    })
+    
+</script>

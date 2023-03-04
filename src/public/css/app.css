@@ -1,0 +1,227 @@
+div.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+h5.card-title {
+  color: #139713;
+  margin-left: 18px;
+  font-size: 1.5em; }
+
+ul.nav-tabs li a.nav-link {
+  color: #df7723;
+  font-size: 1.35em;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.tab-content div.card {
+  margin-bottom: 0px;
+  margin-left: 5px;
+  border: none; }
+
+.fa-building-columns {
+  margin: auto;
+  text-align: center;
+  color: #9cd0e0;
+  margin-left: 20px;
+  margin-top: 20px; }
+
+div.comment {
+  margin-left: 10px;
+  border-left: 1px solid #ebe8e8; }
+
+div.comment div.top-review {
+  font-size: 1.3em;
+  background-color: #139713;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  font-weight: bold; }
+
+div.card-center {
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #d7e8f0;
+  border: none; }
+
+p a.comment-schoolname {
+  color: #168607;
+  font-weight: bold;
+  font-size: 1.2em; }
+
+span.comment-username {
+  color: #02010f;
+  font-weight: bold;
+  font-size: 1.2em; }
+
+span.name-comment {
+  color: #02010f;
+  font-weight: bold;
+  font-size: 1.2em; }
+
+.fa-users {
+  color: #0db2db;
+  margin-right: 5px; }
+
+.fa-location-dot {
+  color: #db5f0d;
+  margin-right: 10px;
+  margin-left: 5px; }
+
+#dropdownMenuButtonAdmin {
+  padding: 10px;
+  background-color: #fafbfc;
+  font-size: 1.2em;
+  color: #080808;
+  margin-right: 10px; }
+
+a.navbar-brand {
+  font-size: 2em;
+  color: #099414; }
+
+button.addschool {
+  border-radius: 5px;
+  font-size: 1.28em;
+  border-color: #168607;
+  border-width: 1px; }
+
+div.showcomment-card {
+  width: 80%;
+  background-color: #e1edf0;
+  border: none;
+  border-radius: 5px 0 0 5px; }
+
+div.addcomment {
+  background-color: #e1edf0;
+  width: 20%;
+  border-radius: 0 5px 5px 0; }
+
+div.addcomment button {
+  padding: 8px;
+  border-radius: 25px;
+  background-color: #3dbb17;
+  font-size: 1.2em;
+  margin-top: 50px;
+  width: 200px; }
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px; }
+
+.fa-graduation-cap {
+  color: #0934f5; }
+
+h4.content-showcomment {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+#showcomment {
+  width: 73%;
+  margin-right: 20px; }
+
+#showcomment div.card {
+  box-shadow: 1px 1px 1px #aaaaaa; }
+
+#card-stars {
+  width: 25%;
+  margin-right: 0; }
+
+.fa-galactic-republic {
+  color: #c90cbf; }
+
+div.progress {
+  width: 65%;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-right: 3px; }
+
+div#card-stars h6 {
+  font-size: 1.2em;
+  color: red; }
+
+div.carousel-caption {
+  text-align: left; }
+
+div.carousel-caption h5 {
+  font-size: 2.2em;
+  color: #02010f; }
+
+div.carousel-caption p {
+  font-size: 1.3em;
+  color: #02010f; }
+
+div.carousel-caption form input {
+  font-size: 1.2em; }
+
+div.carousel-caption form button {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #168607;
+  color: #d7e8f0; }
+
+ol.breadcrumb {
+  background-color: #e1edf0; }
+
+#form-search-showcomment input {
+  width: 80%;
+  font-size: 1.5em; }
+
+#form-search-showcomment button {
+  width: 18%;
+  margin-left: 10px;
+  font-size: 1.5em;
+  background-color: #1dbd08;
+  color: #ffffff; }
+
+#card-stars ul li {
+  border: none; }
+
+#card-stars ul {
+  border: none; }
+
+#form-addschool h1 {
+  text-align: center; }
+
+#form-addschool label {
+  font-size: 1.1em;
+  font-weight: bold; }
+
+#form-addschool span {
+  color: red; }
+
+#form-addschool input {
+  box-shadow: 1px 1px 2px #aaaaaa; }
+
+#form-addschool select {
+  box-shadow: 1px 1px 2px #aaaaaa; }
+
+#form-addschool textarea {
+  box-shadow: 1px 1px 2px #aaaaaa; }
+
+#form-addschool div.card {
+  background-color: #ecf1f3;
+  font-size: 1.1em;
+  font-style: italic;
+  margin-top: 40px; }
+
+#form-addschool button {
+  width: 180px;
+  font-size: 1.2em;
+  background-color: #0356f0;
+  margin-bottom: 180px; }
+
+footer {
+  background-color: #23195e;
+  font-size: 1.2em;
+  bottom: 0;
+  position: relative;
+  margin-top: 200px; }
+
+div.body-comment {
+  background-color: white; }
+
+i.fa-star {
+  color: #f5be07; }

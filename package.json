@@ -1,0 +1,33 @@
+{
+  "name": "reviewcompany",
+  "version": "1.0.0",
+  "description": "review",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "watch": "node-sass --watch ./src/resourses/scss --output ./src/public/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/inuyasha1803/reviewcompany.git"
+  },
+  "author": "Dulian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/inuyasha1803/reviewcompany/issues"
+  },
+  "homepage": "https://gitlab.com/inuyasha1803/reviewcompany#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.9.0",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

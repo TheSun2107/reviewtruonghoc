@@ -1,0 +1,52 @@
+<form class="container mt-4" id="form-addschool" method="POST">
+    <h1 class="">Yêu cầu thêm trường học</h1>
+    <div class="form-group mt-4">
+        <label for="name">Tên trường học <span>*</span></label>
+        <input type="text" class="form-control" name="name" value="" id="name" oninput="this.value = this.value.toUpperCase()" placeholder="TIỂU HỌC MỸ ĐÌNH/ ĐẠI HỌC BÁCH KHOA HÀ NỘI" required>
+    </div>
+    <div class="form-group mt-4">
+        <label for="location">Địa chỉ <span>*</span></label>
+        <input type="text" class="form-control" name="location" value="" id="location" placeholder="Mỹ Đình, Hà Nội" required>
+    </div>
+    <div class="row mt-4">
+        <div class="form-group col-3">
+            <label for="level">Trình độ <span>*</span></label>
+            <select class="custom-select" name="level" value="" id="level" required>
+                <option value="">--chọn trình độ--</option>
+                <option value="Mầm non">Mầm non</option>
+                <option value="Tiểu học">Tiểu học</option>
+                <option value="Trung học cơ sở">Trung học cơ sở</option>
+                <option value="Trung học phổ thông">Trung học phổ thông</option>
+                <option value="Đại học">Đại học</option>
+            </select>
+        </div>
+        <div class="form-group col-3">
+            <label for="size">Số lượng học sinh <span>*</span></label>
+            <select class="form-control" name="size" value="" id="size" required>
+                <option value="">--chọn quy mô--</option>
+                <option value="500">0-500</option>
+                <option value="1000">501-1000</option>
+                <option value="1500">1001-2000</option>
+                <option value="2000">>2000</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group mt-4">
+        <label for="url">Trang web trường</label>
+        <textarea class="form-control" name="url" value="" id="url" rows="3" placeholder="uet.vnu.edu.vn"></textarea>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Khi gửi yêu cầu này, bạn đã đồng ý với <a href="/">điều khoản sử dụng của review trường học</a>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                Yêu cầu của bạn sẽ được duyệt sau 12-24 tiếng! <br>
+                Các yêu cầu điền đúng đầy đủ thông tin sẽ được duyệt nhanh hơn.
+            </div>
+        </div>
+        <br>
+        
+    </div>
+    <button type="submit" class="btn btn-primary mt-4">Gửi yêu cầu</button>
+</form>

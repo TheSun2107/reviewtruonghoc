@@ -1,0 +1,235 @@
+<div class="container mt-4">
+    <form class="form-inline my-2 my-lg-0" id="form-search-showcomment">
+        <input class="form-control mr-sm-2" type="search" placeholder="Nhập tên trường" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+    </form>
+    <nav aria-label="breadcrumb mt-4">
+        <ol class="breadcrumb mt-4">
+            <li class="breadcrumb-item">
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{{school.name}}</li>
+        </ol>
+    </nav>
+    <div class="nav" id="showcomment-card">
+        <div class="showcomment-card p-4">
+            <a href=""><h4 class="">{{school.name}}</h4></a>
+            <p class="card-title">
+                <i class="fa-solid fa-graduation-cap mr-2"></i>
+                {{school.level}}
+                <span class="ml-4"><i class="fa-solid fa-users ml-3 mr-3"></i></span>{{school.size}}
+            </p>
+            <p class="card-text">
+                <i class="fa-solid fa-location-dot"></i>
+                {{school.location}}
+            </p>
+        </div>
+        <div class="addcomment">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addComment"> 
+                <i class="fa-sharp fa-regular fa-pen-to-square"></i>
+                Viết bình luận
+            </button>
+        </div>
+    </div>
+    <h4 class="content-showcomment">Bình luận nổi bật <i class="fa-solid fa-chevron-down"></i></h4>
+    <div class="nav">
+        <div id="showcomment">
+            {{#each comments}}
+                <div class="card bg-light mb-3">
+                    <div class="card-header">
+                        <i class="fa-brands fa-galactic-republic fa-2x mr-2"></i>
+                        <span class="name-comment">
+                            {{#if this.name}} 
+                                <span>{{this.name}}</span> 
+                            {{else}} 
+                                <span>Ẩn danh</span>
+                            {{/if}}
+                        </span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card-body body-comment">
+                        <p class="card-text">{{this.body}}</p>
+                    </div>
+                </div>
+            {{else}}
+                <h5>Chưa có nhận xét nào</h5>
+            {{/each}}
+        </div>
+        <div class="card" id="card-stars">
+            <div class="card-body">
+                <h6 class="card-title">Đánh giá
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="nav">
+                        <span class="stars">1 sao</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%
+                            </div>
+                        </div>
+                        <span class="countstars">(10)</span>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="nav">
+                        <span class="stars">2 sao</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%
+                            </div>
+                        </div>
+                        <span class="countstars">(20)</span>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="nav">
+                        <span class="stars">3 sao</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%
+                            </div>
+                        </div>
+                        <span class="countstars">(30)</span>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="nav">
+                        <span class="stars">4 sao</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%
+                            </div>
+                        </div>
+                        <span class="countstars">(40)</span>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="nav">
+                        <span class="stars">5 sao</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%
+                            </div>
+                        </div>
+                        <span class="countstars">(10)</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="card-body">
+                <p> Bạn đang xem {{school.name}}</p>
+                <p class="card-text">Các đánh giá về môi trường học tập, chất lượng giảng dạy, học phí và các khoản phí khác của {{school.name}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="pageination">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="addComment" tabindex="-1" role="dialog" aria-labelledby="addComment" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+        
+        <div class="modal-header">
+            <h5 class="modal-title" id="commentTitle">Viết bình luận về {{school.name}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form class="needs-validation" method="POST" action="/me/{{school.slug}}/addComment" novalidate>
+            <div class="modal-body">
+                <input type="text" readonly hidden class="form-control-plaintext" id="schoolname" name="schoolname" value="{{school.name}}">
+                <div class="form-group">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Tên gì cũng được">
+                </div>
+                <div class="form-group">
+                    <label for="position">Chức vụ</label>
+                    <input type="text" class="form-control" id="position" name="position" placeholder="Phụ huynh / học sinh hay giáo viên">
+                </div>
+                <div class="form-group">
+                    <label for="body">Nhận xét trường học này</label>
+                    <textarea class="form-control" id="body" name="body" rows="5" placeholder="Nhận xét dài vào nha (Tối thiểu 10 kí tự)" required></textarea>
+                    <div class="invalid-feedback">
+                        Hãy điền mục này
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="point">Cho điểm trường học</label>
+                    <select class="form-control col-sm-6" id="point" name="point" required>
+                        <option value="">--chấm điểm--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{school.slug}}" id="slug" name="slug" required>
+                        <label class="form-check-label" for="slug">
+                            <a href="#">Đồng ý điều khoản & điều kiện</a>
+                        </label>
+                        <div class="invalid-feedback">
+                            Hãy chọn mục này
+                        </div>
+                    </div>
+                </div>
+                
+                <p>Người đăng chịu trách nhiệm về tính xác thực của nội dung. Hãy review khách quan và văn minh.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Đăng bình luận</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Thôi</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>
